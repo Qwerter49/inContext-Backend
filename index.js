@@ -12,4 +12,7 @@ io.on("connection", socket => {
     })
 })
 
-httpApp.listen(3000)
+const PORT = process.env.PORT || 4000
+httpApp.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
+})
